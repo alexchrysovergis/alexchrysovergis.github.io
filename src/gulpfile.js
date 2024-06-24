@@ -7,10 +7,10 @@ const ts = require('gulp-typescript');
 
 const paths = {
     scss: './scss/*.scss',
-    cssDest: './../htdocs/dist/css/',
+    cssDest: './../docs/dist/css/',
     ts: './ts/*.ts',
     js: './js/*.js', 
-    jsDest: './../htdocs/dist/js/'
+    jsDest: './../docs/dist/js/'
 };
 
 function css() {
