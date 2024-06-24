@@ -1,0 +1,43 @@
+{
+  "name": "innerzen",
+  "version": "1.0.0",
+  "description": "A fictional yoga website design",
+  "main": "gulpfile.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/alexchrysovergis/InnerZen.git"
+  },
+  "keywords": [
+    "yoga",
+    "zen",
+    "web",
+    "design",
+    "web",
+    "development"
+  ],
+  "author": "Alex Chrysovergis",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/alexchrysovergis/InnerZen/issues"
+  },
+  "homepage": "https://github.com/alexchrysovergis/InnerZen#readme",
+  "dependencies": {
+    "bootstrap": "^5.3.3",
+    "gulp": "^5.0.0",
+    "gulp-clean-css": "^4.3.0",
+    "gulp-concat": "^2.6.1",
+    "gulp-sass": "^5.1.0",
+    "gulp-uglify": "^3.0.2",
+    "sass": "^1.77.5",
+    "swiper": "^11.1.4"
+  },
+  "devDependencies": {
+    "gulp-typescript": "^6.0.0-alpha.1",
+    "install": "^0.13.0",
+    "npm": "^10.8.1",
+    "typescript": "^5.5.2"
+  }
+}

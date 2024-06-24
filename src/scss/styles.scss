@@ -1,0 +1,240 @@
+@import '../node_modules/bootstrap/scss/bootstrap';
+@import '../node_modules/swiper/swiper-bundle.min.css';
+@import './components/mixins';
+@import './components/variables';
+@import './components/fonts';
+@import './components/header';
+@import './components/footer';
+
+* {
+    scroll-behavior: smooth !important;
+    -moz-transition: all .5s ease-in-out !important;
+    -webkit-transition: all .5s ease-in-out !important;
+    -o-transition: all .5s ease-in-out !important;
+    transition: all .5s ease-in-out !important;
+}
+
+#glitch-transition {
+    background: url('../../assets/img/static-noise.gif') left / cover;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 9999;
+
+    &::before {
+        background: $secondarycolor;
+        content: "";
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        left: 0;
+        z-index: 0;
+    }
+
+    p {
+        z-index: $z-index-header;
+        @include clamp('font-size', 24px, 8vw, 65px);
+        transition: all 0.1s linear;
+        font-family: map-get($map: $asty, $key: 'asty-thin');
+    }
+
+    img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+}
+
+@keyframes crazy {
+    0% { transform: translate(0, -50vh) scaleY(1); }
+    50% { transform: translate(0, 90vh) scaleY(2); }
+    100% { transform: translate(0, 0) scaleY(1); }
+}
+
+.crazy {
+    animation: crazy 0.2s infinite;
+}
+
+.content {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+}
+
+.static-noise {
+    background: url('../../assets/img/static-noise.gif') left / cover;
+    content: "";
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: -1;
+    transition: opacity 0.5s ease-in-out; /* Smooth transition */
+}
+
+body{
+    font-family: map-get($map: $asty, $key: 'asty-book');
+    background: url('../../assets/img/lain.png') left / cover;
+    color: $thirdcolor;
+    cursor: url(../../assets/img/cursor/dot-outline-thin.svg) 4 12, auto;
+
+    &::before {
+        background: $secondarycolor;
+        content: "";
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        left: 0;
+        z-index: 0;
+    }
+}
+
+.main-content {
+    height: 80vh;
+}
+
+h1, h2, h3 {
+    font-family: map-get($map: $asty, $key: 'asty-thin');
+    color: $white;
+}
+
+.logo{
+    width: 80px;
+    scroll-behavior: smooth;
+    -moz-transition: all .5s ease-in-out;
+    -webkit-transition: all .5s ease-in-out;
+    -o-transition: all .5s ease-in-out;
+    transition: all .5s ease-in-out;
+
+    &:hover{
+        opacity: 0.7;
+        filter: hue-rotate(90deg);
+    }
+}
+
+.text-swiper {
+    cursor: url(../../assets/img/cursor/dot-thin.svg) 4 12, auto;
+
+    p {
+        @include clamp('font-size', 14px, 2vw, 16px);
+    }
+}
+
+.social-media {
+    a{
+        font-size: 3rem;
+        color: $primarycolor;
+        scroll-behavior: smooth;
+        -moz-transition: all .5s ease-in-out;
+        -webkit-transition: all .5s ease-in-out;
+        -o-transition: all .5s ease-in-out;
+        transition: all .5s ease-in-out;
+        cursor: url(../../assets/img/cursor/dot-thin.svg) 4 12, auto;
+
+        &:hover{
+            opacity: 0.7;
+            filter: hue-rotate(90deg);
+        }
+    }
+}
+
+.game-cta {
+    @include clamp('font-size', 14px, 2vw, 16px);
+    color: $primarycolor;
+    border: 1px solid $primarycolor;
+    border-radius: 50px;
+    cursor: url(../../assets/img/cursor/dot-thin.svg) 4 12, auto;
+
+    &:hover {
+        filter: hue-rotate(90deg);
+        background: $primarycolor;
+        color: $black;
+    }
+}
+
+/* modal */
+
+#modal {
+    display: none;
+    position: fixed;
+    z-index: 9999;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgb(0,0,0);
+    background-color: rgba(0,0,0,0.4);
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+.modal-content {
+    position: relative;
+    background-color: $secondarycolor;
+    margin: 15% auto;
+    padding: 80px;
+    width: 55%;
+    box-shadow: 0 0 24px 0 #000;
+    border-radius: 8px;
+}
+
+@include media-breakpoint-down(xl) {
+    .modal-content {
+        width: 85%;
+    }
+}
+
+
+.close-button {
+    font-family: map-get($map: $asty, $key: 'asty-thin');
+    cursor: url(../../assets/img/cursor/dot-thin.svg) 4 12, auto;
+    z-index: 999;
+    position: absolute;
+    top: -15px;
+    right: 20px;
+    color: $primarycolor;
+    float: right;
+    font-size: 50px;
+
+    &:hover {
+    filter: hue-rotate(90deg);
+    }
+}
+
+@include media-breakpoint-down(sm) {
+    .modal-content {
+        padding: 50px 0;
+    }
+
+    #breakoutCanvas {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        height: 60vh;
+        overflow: hidden;
+        object-fit: contain;
+    }
+}
+  
+
+
+#message {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+
+    h3  {
+        @include clamp('font-size', 14px, 3vw, 28px);
+        margin-bottom: .75rem;
+    }
+}

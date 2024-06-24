@@ -1,0 +1,23 @@
+// Asty
+@font-face {
+    font-family: 'Asty-Thin';
+    src: url('../../assets/fonts/asty/AstyCFStdThin.otf');
+}
+
+@font-face {
+    font-family: 'Asty-Book';
+    src: url('../../assets/fonts/asty/AstyCFStdBook.otf');
+}
+
+
+$asty: (
+    "asty-thin": "Asty-Thin",
+    "asty-book": "Asty-Book",
+);
+// map.get($asty, "asty-book");
+
+@each $key, $value in $asty {
+    .asty-#{$key} {
+        font-family: $value, 'sans-serif';
+    }
+}

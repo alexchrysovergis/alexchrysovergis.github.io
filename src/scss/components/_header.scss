@@ -1,0 +1,37 @@
+@keyframes marquee {
+    0% {
+        transform: translate3d(var(--move-final), 0, 0);
+    }
+
+    100% {
+        transform: translate3d(var(--move-initial), 0, 0);
+    }
+}
+.marquee {
+    height: 15vh;
+    position: relative;
+    overflow: hidden;
+    --offset: 1vw;
+    --move-initial: calc(-50% + var(--offset));
+    --move-final: calc(50% + var(--offset));
+
+    &__inner {
+        width: fit-content;
+        display: flex;
+        position: relative;
+        transform: translate3d(var(--move-initial), 0, 0);
+        animation: marquee 400s linear infinite;
+        animation-play-state: running;
+    }
+
+    span {
+        padding: 0 1vw;
+        white-space: nowrap;
+        @include clamp('font-size', 24px, 8vw, 68px);
+        font-family: map-get($map: $asty, $key: 'asty-thin');
+        color: $white;
+    }
+}
+
+
+
