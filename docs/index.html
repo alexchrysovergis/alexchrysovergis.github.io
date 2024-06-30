@@ -10,23 +10,22 @@
 	<link rel="stylesheet" href="./dist/css/styles.min.css" />
 </head>
 
-<div id="glitch-transition" class="d-flex justify-content-center align-items-center">
+<div id="glitch-transition" class="d-flex justify-content-center align-items-center" aria-hidden="true">
 	<p id="crazy-paragraph">CONNECTING...</p>
 </div>
 
 <body class="position-relative"> 
 
-<div class="content">
-
+<main class="content" role="main">
 	<div class="static-noise"></div>
-<header class="marquee d-flex justify-content-center align-items-center text-center overflow-hidden">
+<header class="marquee d-flex justify-content-center align-items-center text-center overflow-hidden" role="banner">
 	<div class="marquee__inner" aria-hidden="true"></div>
 </header>
 
 <div class="container main-content position-relative z-2">
 	<div class="row h-100  flex-column justify-content-center">
 		<div class="col-12 d-flex flex-column justify-content-center align-items-center">
-			<img src="./assets/img/logo.png" class="img-fluid logo py-3" alt="Logo" draggable="false" />
+			<img src="./assets/img/logo.png" class="img-fluid logo py-3" alt="Alex Chrysovergis Logo" draggable="false" />
 		</div>
 		<div class="col-12 px-2 d-flex flex-column justify-content-center align-items-center">
 			<h1>Howdy I'm Alex!</h1>
@@ -52,9 +51,9 @@
 		</div>
 		<div class="col-12 d-flex flex-column justify-content-center align-items-center">
 			<ul class="social-media d-flex flex-row gap-5 list-unstyled">			
-				<li class="nav-item"><a href="https://github.com/alexchrysovergis" target="_blank"><img src="./assets/img/icons/github-logo.svg" alt="Github Logo"></a></li>  
-				<li class="nav-item"><a href="https://www.linkedin.com/in/alex-chrysovergis/" target="_blank"><img src="./assets/img/icons/linkedin-logo.svg" alt="Linkedin Logo"></a></li>
-				<li class="nav-item"><a class="text-white text-decoration-none" href="mailto:alexandrosxrisovergis@gmail.com"><img src="./assets/img/icons/envelope-simple.svg" alt=""></a></li>
+				<li class="nav-item"><a href="https://github.com/alexchrysovergis" target="_blank" aria-label="GitHub"><img src="./assets/img/icons/github-logo.svg" alt="Github Logo"></a></li>  
+				<li class="nav-item"><a href="https://www.linkedin.com/in/alex-chrysovergis/" target="_blank" aria-label="Linkedin"><img src="./assets/img/icons/linkedin-logo.svg" alt="Linkedin Logo"></a></li>
+				<li class="nav-item"><a class="text-white text-decoration-none" href="mailto:alexandrosxrisovergis@gmail.com" aria-label="Email"><img src="./assets/img/icons/envelope-simple.svg" alt="Mail Icon"></a></li>
 			</ul>
 		</div>
 		<div class="col-12 d-flex flex-column justify-content-center align-items-center">
@@ -62,18 +61,18 @@
 		</div>		
 	</div>
 </div>
-<footer class="footer text-center position-relative z-2">
+<footer class="footer text-center position-relative z-2" role="contentinfo">
 	<a class="text-decoration-none" href="https://github.com/alexchrysovergis">Designed and Developed By Alex Chrysovergis</a>
 </footer>
 
-<div id="modal" class="d-none">
+<div id="modal" class="d-none" role="dialog" aria-labelledby="modalTitle">
     <div class="modal-content">
-        <span class="close-button">&times;</span>
+        <span class="close-button" aria-label="Close modal">&times;</span>
       	<canvas id="breakoutCanvas" width="960" height="640"></canvas>
 		<div id="message" class="text-center"></div>
     </div>
 </div>
-</div>
+</main>
 
 <script src="./dist/js/scripts.min.js"></script>
 </body>
