@@ -264,7 +264,7 @@ h1, h2, h3 {
 #termsfeed-com---nb {
     background: transparent;
     .cc-nb-main-container, .cc-pc-container {
-        font-family: map-get($map: $asty, $key: 'asty-thin');
+        font-family: map-get($map: $asty, $key: 'asty-book');
         padding: 2rem;
         background: transparent;
         color: $white;
@@ -288,17 +288,19 @@ div#termsfeed-com---nb.termsfeed-com---nb-simple {
 
 .termsfeed-com---palette-light {
     button.cc-nb-okagree {
-        background-color: $primarycolor;
+        background-color: transparent;
+        color: $primarycolor;
     }
-}
 
-.termsfeed-com---palette-light {
     button.cc-nb-reject {
-        background-color: $primarycolor;
+        background-color: transparent;
+        color: $primarycolor;
     }
-}
 
-.termsfeed-com---palette-light {
+    button.cc-nb-changep {
+        display: none;
+    }
+
     button.cc-cp-foot-save {
         background-color: $primarycolor;
     }
