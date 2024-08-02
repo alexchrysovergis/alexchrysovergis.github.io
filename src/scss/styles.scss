@@ -279,37 +279,37 @@ h1, h2, h3 {
         font-size: 13px;
         color: $white;
     }
+}
 
-    div#termsfeed-com---nb.termsfeed-com---nb-simple {
-        max-width: 100%;
-        width: 100%;
-    }
+div#termsfeed-com---nb.termsfeed-com---nb-simple {
+    max-width: 100%;
+    width: 100%;
+}
 
-    .termsfeed-com---palette-light {
-        button.cc-nb-okagree {
-            background-color: $primarycolor;
-        }
+.termsfeed-com---palette-light {
+    button.cc-nb-okagree {
+        background-color: $primarycolor;
     }
+}
 
-    .termsfeed-com---palette-light {
-        button.cc-nb-reject {
-            background-color: $primarycolor;
-        }
+.termsfeed-com---palette-light {
+    button.cc-nb-reject {
+        background-color: $primarycolor;
     }
+}
 
-    .termsfeed-com---palette-light {
-        button.cc-cp-foot-save {
-            background-color: $primarycolor;
-        }
+.termsfeed-com---palette-light {
+    button.cc-cp-foot-save {
+        background-color: $primarycolor;
     }
+}
 
-    div.termsfeed-com---pc-dialog {
-        input[type=checkbox].cc-custom-checkbox:checked+label:before {
-            background: $primarycolor;
-        }
+div.termsfeed-com---pc-dialog {
+    input[type=checkbox].cc-custom-checkbox:checked+label:before {
+        background: $primarycolor;
     }
+}
 
-    button.cc-pc-head-close {
-        border-color: $primarycolor !important;
-    }
+button.cc-pc-head-close {
+    border-color: $primarycolor !important;
 }
