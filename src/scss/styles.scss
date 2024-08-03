@@ -265,10 +265,10 @@ h1, h2, h3 {
     background: transparent;
     .cc-nb-main-container, .cc-pc-container {
         font-family: map-get($map: $asty, $key: 'asty-book');
-        padding: 2rem;
+        padding: 2rem 2rem 1rem 2rem;
         background: transparent;
         color: $white;
-        backdrop-filter: blur(50px);
+        backdrop-filter: blur(10px);
     }
 
     #cc-nb-title {
@@ -290,6 +290,7 @@ div#termsfeed-com---nb.termsfeed-com---nb-simple {
     button.cc-nb-okagree {
         background-color: transparent;
         color: $primarycolor;
+        padding-left: 3px;
     }
 
     button.cc-nb-reject {
@@ -308,10 +309,50 @@ div#termsfeed-com---nb.termsfeed-com---nb-simple {
 
 div.termsfeed-com---pc-dialog {
     input[type=checkbox].cc-custom-checkbox:checked+label:before {
-        background: $primarycolor;
+        background: transparent;
+        border: 1px solid $primarycolor;
+    }
+
+    input[type="checkbox"].cc-custom-checkbox + label::after, input[type="checkbox"].cc-custom-checkbox + label::before {
+        background: transparent;
     }
 }
 
-button.cc-pc-head-close {
-    border-color: $primarycolor !important;
+// Cookies Preferences Center
+
+#termsfeed-com---preferences-center {
+    backdrop-filter: blur(10px);
+    .cc-pc-head, .cc-pc-container, .cc-cp-body-content, .cc-cp-body-content-entry, .cc-cp-body {
+        background: transparent !important;
+        font-family: map-get($map: $asty, $key: 'Asty-Book');
+        border-bottom: none;
+    }
+
+    #cc-pc-head-title-headline, .cc-cp-body-content-entry-title {
+        color: $white;
+        font-size: 14px;
+    }
+
+    .cc-cp-body-content-entry-text {
+        color: $white;
+        font-size: 12px;
+    }
+
+    .cc-pc-head-lang-select {
+        background: transparent;
+        color: white;
+        font-size: 14px;
+
+        &:focus {
+            box-shadow: 0 0 0 1px $primarycolor;
+        }
+    }
+
+    button.cc-pc-head-close {
+        border-color: $primarycolor !important;
+    
+        &:focus {
+            border: 1px solid #6ddbf2;
+        }
+    }
 }
