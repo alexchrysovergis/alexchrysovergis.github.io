@@ -394,6 +394,7 @@ div.termsfeed-com---pc-dialog {
     .cc-cp-body-tabs-item {
         button.cc-cp-body-tabs-item-link {
             color: $primarycolor;
+            cursor: url(../../assets/img/cursor/dot-thin.svg) 4 12, auto;
             
             &:hover, &:focus {
                 filter: hue-rotate(90deg);
@@ -406,6 +407,7 @@ div.termsfeed-com---pc-dialog {
         button.cc-cp-body-tabs-item-link {
             color: $primarycolor;
             filter: hue-rotate(90deg);
+            cursor: url(../../assets/img/cursor/dot-thin.svg) 4 12, auto;
 
             &:focus {
                 box-shadow: none;
