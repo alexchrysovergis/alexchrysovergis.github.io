@@ -373,6 +373,10 @@ div.termsfeed-com---pc-dialog {
 
       .termsfeed-com---pc-dialog {
         width: 875px;
+        margin: 0;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%,-50%);
       }
 
       .cc-cp-body-tabs {
@@ -484,7 +488,7 @@ div.termsfeed-com---pc-dialog {
 }
 
 @media only screen and (max-width: 600px) {
-    .termsfeed-com---preferences-center {
+    #termsfeed-com---preferences-center {
         .cc-cp-body-content-entry {
             padding: 25px 10px;
         }
