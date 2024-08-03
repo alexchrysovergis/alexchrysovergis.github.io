@@ -274,7 +274,14 @@ h1, h2, h3 {
         background: transparent;
         color: $white;
         backdrop-filter: blur(10px);
+        -webkit-backdrop-filter: blur(10px);
     }
+
+    @supports not (backdrop-filter: blur(10px)) {
+        .cc-nb-main-container, .cc-pc-container {
+            background-color: rgba(18,43,49,.7882352941);
+        }
+      }
 
     #cc-nb-title {
         display: none;
@@ -343,6 +350,14 @@ div.termsfeed-com---pc-dialog {
 
 #termsfeed-com---preferences-center {
     backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+
+    @supports not (backdrop-filter: blur(10px)) {
+        #termsfeed-com---preferences-center {
+            background-color: rgba(18,43,49,.7882352941);
+        }
+      } 
+
     .cc-pc-head, .cc-pc-container, .cc-cp-body-content, .cc-cp-body-content-entry, .cc-cp-body, .cc-cp-foot {
         background: transparent !important;
         font-family: map-get($map: $asty, $key: 'Asty-Book');
