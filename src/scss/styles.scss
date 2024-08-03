@@ -253,6 +253,11 @@ h1, h2, h3 {
   display: flex;
   justify-content: center;
   align-items: center;
+  cursor: url(../../assets/img/cursor/dot-thin.svg) 4 12, auto;
+
+  &:hover {
+    filter: hue-rotate(90deg);
+  }
 
   img {
     width: 27px;
@@ -278,6 +283,11 @@ h1, h2, h3 {
     #cc-nb-text {
         font-size: 13px;
         color: $white;
+        text-align: center;
+    }
+
+    .cc-nb-buttons-container {
+        text-align: center;
     }
 }
 
@@ -290,31 +300,42 @@ div#termsfeed-com---nb.termsfeed-com---nb-simple {
     button.cc-nb-okagree {
         background-color: transparent;
         color: $primarycolor;
-        padding-left: 3px;
+        cursor: url(../../assets/img/cursor/dot-thin.svg) 4 12, auto;
+
+        &:hover {
+            filter: hue-rotate(90deg);
+        }
     }
 
     button.cc-nb-reject {
         background-color: transparent;
         color: $primarycolor;
+        cursor: url(../../assets/img/cursor/dot-thin.svg) 4 12, auto;
+
+        &:hover {
+            filter: hue-rotate(90deg);
+        }
     }
 
     button.cc-nb-changep {
         display: none;
-    }
-
-    button.cc-cp-foot-save {
-        background-color: $primarycolor;
     }
 }
 
 div.termsfeed-com---pc-dialog {
     input[type=checkbox].cc-custom-checkbox:checked+label:before {
         background: transparent;
+        filter: hue-rotate(90deg);
+        cursor: url(../../assets/img/cursor/dot-thin.svg) 4 12, auto;
+    }
+    
+    input[type=checkbox].cc-custom-checkbox+label:before {
         border: 1px solid $primarycolor;
     }
 
     input[type="checkbox"].cc-custom-checkbox + label::after, input[type="checkbox"].cc-custom-checkbox + label::before {
         background: transparent;
+        cursor: url(../../assets/img/cursor/dot-thin.svg) 4 12, auto;
     }
 }
 
@@ -322,10 +343,10 @@ div.termsfeed-com---pc-dialog {
 
 #termsfeed-com---preferences-center {
     backdrop-filter: blur(10px);
-    .cc-pc-head, .cc-pc-container, .cc-cp-body-content, .cc-cp-body-content-entry, .cc-cp-body {
+    .cc-pc-head, .cc-pc-container, .cc-cp-body-content, .cc-cp-body-content-entry, .cc-cp-body, .cc-cp-foot {
         background: transparent !important;
         font-family: map-get($map: $asty, $key: 'Asty-Book');
-        border-bottom: none;
+        border: none;
     }
 
     #cc-pc-head-title-headline, .cc-cp-body-content-entry-title {
@@ -340,19 +361,51 @@ div.termsfeed-com---pc-dialog {
 
     .cc-pc-head-lang-select {
         background: transparent;
-        color: white;
+        color: $white;
         font-size: 14px;
+        cursor: url(../../assets/img/cursor/dot-thin.svg) 4 12, auto;
 
-        &:focus {
-            box-shadow: 0 0 0 1px $primarycolor;
+        &:hover, &:focus {
+            box-shadow: 0;
+            filter: hue-rotate(90deg);
         }
     }
 
     button.cc-pc-head-close {
         border-color: $primarycolor !important;
+        color: $white;
+        cursor: url(../../assets/img/cursor/dot-thin.svg) 4 12, auto;
     
-        &:focus {
-            border: 1px solid #6ddbf2;
+        &:hover, &:focus {
+            border: none;
+            filter: hue-rotate(90deg);
+        }
+    }
+
+    button.cc-cp-foot-save {
+        background-color: transparent;
+        color: $primarycolor;
+        border: 1px solid $primarycolor;
+        border-radius: 25px;
+        font-size: 12px;
+        cursor: url(../../assets/img/cursor/dot-thin.svg) 4 12, auto;
+
+        &:hover {
+            filter: hue-rotate(90deg);
+        }
+    }
+
+    .cc-cp-foot-byline {
+        color: $white;
+
+        a {
+            color: $primarycolor;
+            cursor: url(../../assets/img/cursor/dot-thin.svg) 4 12, auto;
+            font-size: 12px;
+
+            &:hover {
+                filter: hue-rotate(90deg);
+            }
         }
     }
 }
