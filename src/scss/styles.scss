@@ -87,7 +87,7 @@ html, body {
     transition: opacity 0.5s ease-in-out; /* Smooth transition */
 }
 
-body{
+body {
     font-family: map-get($map: $asty, $key: 'asty-book');
     background: url('../../assets/img/lain.png') left / cover;
     color: $thirdcolor;
