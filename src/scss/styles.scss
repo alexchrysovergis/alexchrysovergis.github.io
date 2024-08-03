@@ -353,6 +353,10 @@ div.termsfeed-com---pc-dialog {
         background: transparent;
         cursor: url(../../assets/img/cursor/dot-thin.svg) 4 12, auto;
     }
+
+    input[type="checkbox"].cc-custom-checkbox + label {
+        color: $white;
+    }
 }
 
 // Cookies Preferences Center
@@ -475,6 +479,14 @@ div.termsfeed-com---pc-dialog {
                 filter: hue-rotate(90deg);
                 text-decoration: none;
             }
+        }
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    .termsfeed-com---preferences-center {
+        .cc-cp-body-content-entry {
+            padding: 25px 10px;
         }
     }
 }
