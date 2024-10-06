@@ -14,6 +14,28 @@ Welcome to my personal website hosted on GitHub Pages. Here you'll find informat
 - **TypeScript**
 - **GitHub Pages**
 
+## Installation
+
+### Clone the repository:
+
+`git clone https://github.com/alexchrysovergis/alexchrysovergis.github.io`
+
+### Navigate to the src directory:
+
+`cd src`
+
+### Install dependencies:
+
+`npm install`
+
+### Build and watch for changes (automatically recompile on save):
+
+`gulp css js compileTs watch`
+
+### OR if you prefer to manually recompile:
+
+`gulp css js compileTs`
+
 ---
 
 Thank you for visiting!
