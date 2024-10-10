@@ -236,7 +236,6 @@ document.addEventListener("DOMContentLoaded", function() {
       gameInterval = setInterval(draw, 10);
     }
   }
-
   function resetGame() {
     x = canvas.width / 2;
     y = canvas.height - 30;

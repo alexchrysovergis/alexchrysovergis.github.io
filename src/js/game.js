@@ -70,10 +70,10 @@ document.addEventListener("DOMContentLoaded", function () {
         e.preventDefault();
         const touchX = e.touches[0].clientX - canvas.offsetLeft;
         paddleX = touchX - paddleWidth / 2;
-        
         if (paddleX < 0) {
             paddleX = 0;
-        } else if (paddleX + paddleWidth > canvas.width) {
+        }
+        else if (paddleX + paddleWidth > canvas.width) {
             paddleX = canvas.width - paddleWidth;
         }
     }
@@ -81,10 +81,10 @@ document.addEventListener("DOMContentLoaded", function () {
         e.preventDefault();
         const touchX = e.touches[0].clientX - canvas.offsetLeft;
         paddleX = touchX - paddleWidth / 2;
-        
         if (paddleX < 0) {
             paddleX = 0;
-        } else if (paddleX + paddleWidth > canvas.width) {
+        }
+        else if (paddleX + paddleWidth > canvas.width) {
             paddleX = canvas.width - paddleWidth;
         }
     }
@@ -270,4 +270,3 @@ document.addEventListener("DOMContentLoaded", function () {
     window.addEventListener('resize', resizeCanvas, false);
     resizeCanvas();
 });
-
