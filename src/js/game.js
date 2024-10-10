@@ -48,8 +48,8 @@ document.addEventListener("DOMContentLoaded", function () {
     let gameInterval;
     document.addEventListener("keydown", keyDownHandler, false);
     document.addEventListener("keyup", keyUpHandler, false);
-    canvas.addEventListener("touchstart", touchStartHandler, false);
-    canvas.addEventListener("touchmove", touchMoveHandler, false);
+    canvas.addEventListener("touchstart", touchStartHandler, { passive: false });
+    canvas.addEventListener("touchmove", touchMoveHandler, { passive: false });
     function keyDownHandler(e) {
         if (e.key == "Right" || e.key == "ArrowRight") {
             rightPressed = true;
@@ -67,21 +67,24 @@ document.addEventListener("DOMContentLoaded", function () {
         }
     }
     function touchStartHandler(e) {
-        const touchX = e.touches[0].clientX;
-        if (touchX > canvas.width / 2) {
-            rightPressed = true;
-        }
-        else {
-            leftPressed = true;
+        e.preventDefault();
+        const touchX = e.touches[0].clientX - canvas.offsetLeft;
+        paddleX = touchX - paddleWidth / 2;
+        
+        if (paddleX < 0) {
+            paddleX = 0;
+        } else if (paddleX + paddleWidth > canvas.width) {
+            paddleX = canvas.width - paddleWidth;
         }
     }
     function touchMoveHandler(e) {
-        const touchX = e.touches[0].clientX;
+        e.preventDefault();
+        const touchX = e.touches[0].clientX - canvas.offsetLeft;
         paddleX = touchX - paddleWidth / 2;
+        
         if (paddleX < 0) {
             paddleX = 0;
-        }
-        else if (paddleX + paddleWidth > canvas.width) {
+        } else if (paddleX + paddleWidth > canvas.width) {
             paddleX = canvas.width - paddleWidth;
         }
     }
@@ -267,3 +270,4 @@ document.addEventListener("DOMContentLoaded", function () {
     window.addEventListener('resize', resizeCanvas, false);
     resizeCanvas();
 });
+
