@@ -24,7 +24,7 @@ html, body {
 }
 
 #glitch-transition {
-    background: url('../../assets/img/static-noise.gif') left / cover;
+    background: url('../../assets/img/static-noise.webp') left / cover;
     position: fixed;
     top: 0;
     left: 0;
@@ -76,7 +76,7 @@ html, body {
 }
 
 .static-noise {
-    background: url('../../assets/img/static-noise.gif') left / cover;
+    background: url('../../assets/img/static-noise.webp') left / cover;
     content: "";
     width: 100%;
     height: 100%;
@@ -89,7 +89,7 @@ html, body {
 
 body {
     font-family: map-get($map: $asty, $key: 'asty-book');
-    background: url('../../assets/img/lain.png') left / cover;
+    background: url('../../assets/img/lain.webp') left / cover;
     color: $thirdcolor;
     cursor: url(../../assets/img/cursor/dot-outline-thin.svg) 4 12, auto;
 
