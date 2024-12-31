@@ -8,9 +8,10 @@
     }
 }
 .marquee {
-    height: 15vh;
     position: relative;
     overflow: hidden;
+    margin-top: 32px;
+    max-height: 71px;
     --offset: 1vw;
     --move-initial: calc(-50% + var(--offset));
     --move-final: calc(50% + var(--offset));
@@ -25,11 +26,19 @@
     }
 
     span {
-        padding: 0 1vw;
+        padding: 0 24px;
         white-space: nowrap;
-        @include clamp('font-size', 24px, 8vw, 68px);
+        @include clamp('font-size', 24px, 3.54166666667vw, 68px);
         font-family: map-get($map: $asty, $key: 'asty-thin');
         color: $white;
+
+        @include media-breakpoint-down(md) {
+            padding: 0 8px;
+        }
+    }
+
+    @include media-breakpoint-down(md) {
+        margin-top: 24px;
     }
 }
 

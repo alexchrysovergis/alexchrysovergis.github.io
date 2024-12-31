@@ -1,8 +1,6 @@
 .footer {
-    height: 5vh;
-
     a {
-        @include clamp('font-size', 12px, 2vw, 16px);
+        font-size: 16px;
         color:$primarycolor;
         scroll-behavior: smooth;
         -moz-transition: all .5s ease-in-out;
@@ -12,8 +10,11 @@
         cursor: url(../../assets/img/cursor/dot-thin.svg) 4 12, auto;
 
         &:hover {
-            opacity: 0.7;
             filter: hue-rotate(90deg);
+        }
+
+        @include media-breakpoint-down(md) {
+            font-size: 14px;
         }
     }
 }
