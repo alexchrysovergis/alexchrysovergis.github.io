@@ -163,13 +163,13 @@ document.addEventListener("DOMContentLoaded", function() {
   }
 
   function drawScore() {
-    ctx.font = "18px Asty-Thin";
+    ctx.font = "18px poppins-extralight";
     ctx.fillStyle = "#6ddbf2";
     ctx.fillText("Score: " + score, 8, 20);
   }
 
   function drawLives() {
-    ctx.font = "18px Asty-Thin";
+    ctx.font = "18px poppins-extralight";
     ctx.fillStyle = "#6ddbf2";
     ctx.fillText("Lives: " + lives, canvas.width - 65, 20);
   }

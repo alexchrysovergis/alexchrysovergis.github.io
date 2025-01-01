@@ -8,7 +8,7 @@
 
 html, body {
     overflow-x: hidden;
-    font-family: map-get($map: $asty, $key: 'asty-book');
+    font-family: map-get($map: $poppins, $key: 'poppins-light');
 }
 
 ::selection {
@@ -50,7 +50,7 @@ html, body {
         z-index: $z-index-header;
         @include clamp('font-size', 24px, 3.38541666667vw, 65px);
         transition: all 0.1s linear;
-        font-family: map-get($map: $asty, $key: 'asty-thin');
+        font-family: map-get($map: $poppins, $key: 'poppins-extralight');
     }
 
     img {
@@ -89,7 +89,7 @@ html, body {
 }
 
 body {
-    font-family: map-get($map: $asty, $key: 'asty-book');
+    font-family: map-get($map: $poppins, $key: 'poppins-light');
     background: url('../../assets/img/lain.webp') left / cover;
     color: $thirdcolor;
     cursor: url(../../assets/img/cursor/dot-outline-thin.svg) 4 12, auto;
@@ -106,7 +106,7 @@ body {
 }
 
 h1, h2, h3 {
-    font-family: map-get($map: $asty, $key: 'asty-thin');
+    font-family: map-get($map: $poppins, $key: 'poppins-extralight');
     color: $white;
 }
 
@@ -138,11 +138,11 @@ h1 {
 
     p {
         font-size: 16px;
-        line-height: 17px;
+        line-height: 20px;
 
         @include media-breakpoint-down(md) {
             font-size: 11px;
-            line-height: 13px;
+            line-height: 15px;
         }
     }
 }
@@ -232,7 +232,7 @@ h1 {
 
 
 .close-button {
-    font-family: map-get($map: $asty, $key: 'asty-thin');
+    font-family: map-get($map: $poppins, $key: 'poppins-extralight');
     cursor: url(../../assets/img/cursor/dot-thin.svg) 4 12, auto;
     z-index: 999;
     position: absolute;
@@ -307,7 +307,7 @@ h1 {
 #termsfeed-com---nb {
     background: transparent;
     .cc-nb-main-container, .cc-pc-container {
-        font-family: map-get($map: $asty, $key: 'asty-book');
+        font-family: map-get($map: $poppins, $key: 'poppins-light');
         padding: 2rem 2rem 1rem 2rem;
         background: transparent;
         color: $white;
@@ -405,7 +405,7 @@ div.termsfeed-com---pc-dialog {
       }
 
       .cc-cp-body-tabs {
-        font-family: map-get($map: $asty, $key: 'asty-book');
+        font-family: map-get($map: $poppins, $key: 'poppins-light');
         background: transparent;
         min-width: 250px;
         width: 250px;
@@ -413,13 +413,13 @@ div.termsfeed-com---pc-dialog {
 
     .cc-pc-head, .cc-pc-container, .cc-cp-body-content, .cc-cp-body-content-entry, .cc-cp-body, .cc-cp-foot {
         background: transparent !important;
-        font-family: map-get($map: $asty, $key: 'asty-book');
+        font-family: map-get($map: $poppins, $key: 'poppins-light');
         border: none;
     }
 
     .cc-cp-body-tabs-item, .cc-cp-body-tabs-item[active="true"] {
         background: transparent !important;
-        font-family: map-get($map: $asty, $key: 'asty-book');
+        font-family: map-get($map: $poppins, $key: 'poppins-light');
         border: none;
         cursor: url(../../assets/img/cursor/dot-thin.svg) 4 12, auto;
     }
@@ -482,7 +482,7 @@ div.termsfeed-com---pc-dialog {
     }
 
     button.cc-cp-foot-save {
-        font-family: map-get($map: $asty, $key: 'asty-book');
+        font-family: map-get($map: $poppins, $key: 'poppins-light');
         background-color: transparent;
         color: $primarycolor;
         border: none;
@@ -497,7 +497,7 @@ div.termsfeed-com---pc-dialog {
 
     .cc-cp-foot-byline {
         color: $white;
-        font-family: map-get($map: $asty, $key: 'asty-book');
+        font-family: map-get($map: $poppins, $key: 'poppins-light');
 
         a {
             color: $primarycolor;
