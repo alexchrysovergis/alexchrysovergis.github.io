@@ -1,20 +1,20 @@
 .footer {
-    a {
-        font-size: 16px;
-        color:$primarycolor;
-        scroll-behavior: smooth;
-        -moz-transition: all .5s ease-in-out;
-        -webkit-transition: all .5s ease-in-out;
-        -o-transition: all .5s ease-in-out;
-        transition: all .5s ease-in-out;
-        cursor: url(../../assets/img/cursor/dot-thin.svg) 4 12, auto;
+  a {
+    font-size: 16px;
+    color:$primarycolor;
+    scroll-behavior: smooth;
+    -moz-transition: all .5s ease-in-out;
+    -webkit-transition: all .5s ease-in-out;
+    -o-transition: all .5s ease-in-out;
+    transition: all .5s ease-in-out;
+    cursor: url(../../assets/img/cursor/dot-thin.svg) 4 12, auto;
 
-        &:hover {
-            filter: hue-rotate(90deg);
-        }
-
-        @include media-breakpoint-down(md) {
-            font-size: 14px;
-        }
+    &:hover {
+      filter: hue-rotate(90deg);
     }
+
+    @include media-breakpoint-down(md) {
+      font-size: 14px;
+    }
+  }
 }

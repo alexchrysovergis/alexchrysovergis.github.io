@@ -1,15 +1,38 @@
-@mixin clamp($property, $min-size, $scaler, $max-size, $min-size-left:false, $scaler-left:false, $max-size-left:false) {
-    @if $min-size-left == false {
-      #{$property}:$max-size; 
-      #{$property}:#{"min(max(#{$min-size}, #{$scaler}), #{$max-size})"}; 
-      #{$property}:clamp($min-size, $scaler, $max-size);
-    } @else if $min-size-left == 0 or $min-size-left == auto{
-      #{$property}:$max-size $min-size-left; 
-      #{$property}:#{"min(max(#{$min-size}, #{$scaler}), #{$max-size})"} $min-size-left;
-      #{$property}:clamp($min-size, $scaler, $max-size) $min-size-left;
-    } @else {
-      #{$property}:$max-size $min-size-left; 
-      #{$property}:#{"min(max(#{$min-size}, #{$scaler}), #{$max-size})"} #{"min(max(#{$min-size-left}, #{$scaler-left}), #{$max-size-left})"}; 
-      #{$property}:clamp($min-size, $scaler, $max-size) clamp($min-size-left, $scaler-left, $max-size-left);
-    }
+@mixin clamp($property, $min, $max) {
+  @media (max-width: 1200px) {
+    #{$property}: #{$min}px;
   }
+  @media (min-width: 1200px) {
+    #{$property}: #{$max}px;
+  }
+  @supports (min-width: 1px) and (max-width: 2px) {
+    #{$property}: min(
+      #{$max}px,
+      max(
+        #{$min}px,
+        calc(
+          #{$min}px 
+          + (#{$max} - #{$min})
+          * (
+            (min(1920px, max(425px, 100vw)) - 425px)
+            / (1920 - 425)
+          )
+        )
+      )
+    );
+  }
+  @supports (width: clamp(1px, 2px, 3px)) {
+    #{$property}: clamp(
+      #{$min}px,
+      calc(
+        #{$min}px 
+        + (#{$max} - #{$min})
+        * (
+          (min(1920px, max(425px, 100vw)) - 425px)
+          / (1920 - 425)
+        )
+      ),
+      #{$max}px
+    );
+  }
+}

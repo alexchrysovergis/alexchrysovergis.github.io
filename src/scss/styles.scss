@@ -1,5 +1,5 @@
 @import '../node_modules/bootstrap/scss/bootstrap';
-@import '../node_modules/swiper/swiper-bundle.min.css';
+@import '../node_modules/swiper/swiper';
 @import './components/mixins';
 @import './components/variables';
 @import './components/fonts';
@@ -7,57 +7,57 @@
 @import './components/footer';
 
 html, body {
-    overflow-x: hidden;
-    font-family: map-get($map: $poppins, $key: 'poppins-light');
+  overflow-x: hidden;
+  font-family: map-get($map: $poppins, $key: 'light');
 }
 
 ::selection {
-    background: $primarycolorhue;
-    color: $black;
+  background: $primarycolorhue;
+  color: $black;
 }
 
 * {
-    scroll-behavior: smooth !important;
-    -moz-transition: all .5s ease-in-out !important;
-    -webkit-transition: all .5s ease-in-out !important;
-    -o-transition: all .5s ease-in-out !important;
-    transition: all .5s ease-in-out !important;
+  scroll-behavior: smooth !important;
+  -moz-transition: all .5s ease-in-out !important;
+  -webkit-transition: all .5s ease-in-out !important;
+  -o-transition: all .5s ease-in-out !important;
+  transition: all .5s ease-in-out !important;
 }
 
 #glitch-transition {
-    background: url('../../assets/img/static-noise.webp') left / cover;
-    position: fixed;
-    top: 0;
-    left: 0;
+  background: url('../../assets/img/static-noise.webp') left / cover;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 9999999;
+
+  &::before {
+    background: $secondarycolor;
+    content: "";
     width: 100%;
     height: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    z-index: 9999999;
+    position: absolute;
+    left: 0;
+    z-index: 0;
+  }
 
-    &::before {
-        background: $secondarycolor;
-        content: "";
-        width: 100%;
-        height: 100%;
-        position: absolute;
-        left: 0;
-        z-index: 0;
-    }
+  p {
+    z-index: $z-index-header;
+    @include clamp(font-size, 24, 65);
+    transition: all 0.1s linear;
+    font-family: map-get($map: $poppins, $key: 'extralight');
+  }
 
-    p {
-        z-index: $z-index-header;
-        @include clamp('font-size', 24px, 3.38541666667vw, 65px);
-        transition: all 0.1s linear;
-        font-family: map-get($map: $poppins, $key: 'poppins-extralight');
-    }
-
-    img {
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
-    }
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
 }
 
 @keyframes crazy {
@@ -89,8 +89,11 @@ html, body {
 }
 
 body {
-    font-family: map-get($map: $poppins, $key: 'poppins-light');
-    background: url('../../assets/img/lain.webp') left / cover;
+    font-family: map-get($map: $poppins, $key: 'light');
+    background: url(../../assets/img/lain.webp) bottom/cover;
+    background-repeat: repeat;
+    background-attachment: scroll;
+    background-size: cover;
     color: $thirdcolor;
     cursor: url(../../assets/img/cursor/dot-outline-thin.svg) 4 12, auto;
 
@@ -106,7 +109,7 @@ body {
 }
 
 h1, h2, h3 {
-    font-family: map-get($map: $poppins, $key: 'poppins-extralight');
+    font-family: map-get($map: $poppins, $key: 'extralight');
     color: $white;
 }
 
@@ -121,7 +124,7 @@ h1 {
 }
 
 .logo{
-    @include clamp('width', 60px, 4.16666666667vw, 80px);
+    @include clamp(width, 60, 80);
     scroll-behavior: smooth;
     -moz-transition: all .5s ease-in-out;
     -webkit-transition: all .5s ease-in-out;
@@ -232,7 +235,7 @@ h1 {
 
 
 .close-button {
-    font-family: map-get($map: $poppins, $key: 'poppins-extralight');
+    font-family: map-get($map: $poppins, $key: 'extralight');
     cursor: url(../../assets/img/cursor/dot-thin.svg) 4 12, auto;
     z-index: 999;
     position: absolute;
@@ -272,7 +275,7 @@ h1 {
     transform: translate(-50%,-50%);
 
     h3  {
-        @include clamp('font-size', 14px, 3vw, 28px);
+        @include clamp(font-size, 14, 28);
         margin-bottom: .75rem;
     }
 }
@@ -307,7 +310,7 @@ h1 {
 #termsfeed-com---nb {
     background: transparent;
     .cc-nb-main-container, .cc-pc-container {
-        font-family: map-get($map: $poppins, $key: 'poppins-light');
+        font-family: map-get($map: $poppins, $key: 'light');
         padding: 2rem 2rem 1rem 2rem;
         background: transparent;
         color: $white;
@@ -405,7 +408,7 @@ div.termsfeed-com---pc-dialog {
       }
 
       .cc-cp-body-tabs {
-        font-family: map-get($map: $poppins, $key: 'poppins-light');
+        font-family: map-get($map: $poppins, $key: 'light');
         background: transparent;
         min-width: 250px;
         width: 250px;
@@ -413,13 +416,13 @@ div.termsfeed-com---pc-dialog {
 
     .cc-pc-head, .cc-pc-container, .cc-cp-body-content, .cc-cp-body-content-entry, .cc-cp-body, .cc-cp-foot {
         background: transparent !important;
-        font-family: map-get($map: $poppins, $key: 'poppins-light');
+        font-family: map-get($map: $poppins, $key: 'light');
         border: none;
     }
 
     .cc-cp-body-tabs-item, .cc-cp-body-tabs-item[active="true"] {
         background: transparent !important;
-        font-family: map-get($map: $poppins, $key: 'poppins-light');
+        font-family: map-get($map: $poppins, $key: 'light');
         border: none;
         cursor: url(../../assets/img/cursor/dot-thin.svg) 4 12, auto;
     }
@@ -482,7 +485,7 @@ div.termsfeed-com---pc-dialog {
     }
 
     button.cc-cp-foot-save {
-        font-family: map-get($map: $poppins, $key: 'poppins-light');
+        font-family: map-get($map: $poppins, $key: 'light');
         background-color: transparent;
         color: $primarycolor;
         border: none;
@@ -497,7 +500,7 @@ div.termsfeed-com---pc-dialog {
 
     .cc-cp-foot-byline {
         color: $white;
-        font-family: map-get($map: $poppins, $key: 'poppins-light');
+        font-family: map-get($map: $poppins, $key: 'light');
 
         a {
             color: $primarycolor;

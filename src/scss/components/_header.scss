@@ -1,45 +1,45 @@
 @keyframes marquee {
-    0% {
-        transform: translate3d(var(--move-final), 0, 0);
-    }
+  0% {
+    transform: translate3d(var(--move-final), 0, 0);
+  }
 
-    100% {
-        transform: translate3d(var(--move-initial), 0, 0);
-    }
+  100% {
+    transform: translate3d(var(--move-initial), 0, 0);
+  }
 }
 .marquee {
+  position: relative;
+  overflow: hidden;
+  margin-top: 32px;
+  max-height: 71px;
+  --offset: 1vw;
+  --move-initial: calc(-50% + var(--offset));
+  --move-final: calc(50% + var(--offset));
+
+  &__inner {
+    width: fit-content;
+    display: flex;
     position: relative;
-    overflow: hidden;
-    margin-top: 32px;
-    max-height: 71px;
-    --offset: 1vw;
-    --move-initial: calc(-50% + var(--offset));
-    --move-final: calc(50% + var(--offset));
+    transform: translate3d(var(--move-initial), 0, 0);
+    animation: marquee 400s linear infinite;
+    animation-play-state: running;
+  }
 
-    &__inner {
-        width: fit-content;
-        display: flex;
-        position: relative;
-        transform: translate3d(var(--move-initial), 0, 0);
-        animation: marquee 400s linear infinite;
-        animation-play-state: running;
-    }
-
-    span {
-        padding: 0 24px;
-        white-space: nowrap;
-        @include clamp('font-size', 24px, 3.54166666667vw, 68px);
-        font-family: map-get($map: $poppins, $key: 'poppins-extralight');
-        color: $white;
-
-        @include media-breakpoint-down(md) {
-            padding: 0 8px;
-        }
-    }
+  span {
+    padding: 0 24px;
+    white-space: nowrap;
+    @include clamp(font-size, 24, 68);
+    font-family: map-get($map: $poppins, $key: 'extralight');
+    color: $white;
 
     @include media-breakpoint-down(md) {
-        margin-top: 24px;
+      padding: 0 8px;
     }
+  }
+
+  @include media-breakpoint-down(md) {
+    margin-top: 24px;
+  }
 }
 
 
